@@ -1,11 +1,17 @@
 {
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:@next/next/recommended"
     ],
     "overrides": [
     ],
@@ -17,5 +23,7 @@
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off"
     }
 }
