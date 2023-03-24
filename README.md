@@ -3,11 +3,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### Getting Started
 1. Install Packages
 ```bash
-npm install
+yarn
 ```
 2. Now run the development server:
 ```bash
-npm run dev
+yarn dev
 ```
 >Inside `package.json` file all application properties are listed.
 
@@ -25,6 +25,11 @@ npm run dev
 │   │   ├── _document.js
 │   │   ├── index.js
 │   ├── styles            [Contains all stylesheets]
+├── .eslintrc.json
+├── jsconfig.json
+├── next.config.js
+├── package.json
+├── yarn.lock
 
 ```
 >NOTE: Check [Next.js](https://nextjs.org/docs) documentation to see how pages/filename.js are mapped to frontend pages ([Dynamic Routing](https://nextjs.org/docs/basic-features/pages)), and api routes mapping to filenames inside ./src/pages/api folder
