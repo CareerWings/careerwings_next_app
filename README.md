@@ -9,7 +9,15 @@ yarn
 ```bash
 yarn dev
 ```
->Inside `package.json` file all application properties are listed.
+3. Run Linting before pushing to remote
+```bash
+yarn lint
+```
+>CI checks will run once you push to remote, make sure the checks pass, else ping @Ayush or @Sana to get it cleared. You can see the status of checks inside >>Actions tab.
+
+>.eslintrc.json contains linting rules, please inform before twerking these rules.
+
+>Any Issues regarding linting errors, just ping @Ayush or @Sana anytime... We'll resolve together.
 
 ### Folder Structure
 ```bash
@@ -34,7 +42,7 @@ yarn dev
 ```
 >NOTE: Check [Next.js](https://nextjs.org/docs) documentation to see how pages/filename.js are mapped to frontend pages ([Dynamic Routing](https://nextjs.org/docs/basic-features/pages)), and api routes mapping to filenames inside ./src/pages/api folder
 
-<details open>
+<details closed>
 <summary>Next Documentation </summary>
 <br>
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
