@@ -42,7 +42,7 @@ yarn lint
 ```
 >NOTE: Check [Next.js](https://nextjs.org/docs) documentation to see how pages/filename.js are mapped to frontend pages ([Dynamic Routing](https://nextjs.org/docs/basic-features/pages)), and api routes mapping to filenames inside ./src/pages/api folder
 
-<details open>
+<details closed>
 <summary>Next Documentation </summary>
 <br>
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
