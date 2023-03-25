@@ -1,29 +1,16 @@
 {
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
     "env": {
         "browser": true,
+        "commonjs": true,
         "es2021": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@next/next/recommended"
-    ],
+    "extends": "airbnb-base",
     "overrides": [
     ],
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        "ecmaVersion": "latest"
     },
-    "plugins": [
-        "react"
-    ],
     "rules": {
-        "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off"
+        "no-console":"off"
     }
 }
