@@ -13,12 +13,12 @@ const mentors=[
     ["","0","0"],];
 export default function Home() {
     return (
-        <React.Fragment>
+        <>
         {mentors.map((item, index) => (
                 <Mentor key={index} image={item[0]} colorA={item[1]} colorB={item[2]}/>
         ))}
        
        <Partner/>
-       </React.Fragment>
+       </>
     );
 }
