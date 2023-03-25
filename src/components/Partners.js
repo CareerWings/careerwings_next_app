@@ -7,17 +7,15 @@ function Partner()
 {
     var items = [
         {
-            imgurl:"https://5.imimg.com/data5/SELLER/Default/2021/10/CO/NN/OJ/23571748/ambuja-ppc-cement-1000x1000.jpg",
-            description: "Probably the most random thing you have ever seen!"
+            imgurl:"https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
         },
         {
-            imgurl:"/vercel.p",
-            description: "Hello World!"
+            imgurl:"https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
         }
     ]
 
     return (
-        <Carousel>
+        <Carousel autoPlay={true} animation="slide">
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
