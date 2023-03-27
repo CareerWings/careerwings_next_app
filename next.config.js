@@ -5,5 +5,4 @@ const nextConfig = {
     domains : ['static.startuptalky.com']
   }
 }
-
 module.exports = nextConfig
