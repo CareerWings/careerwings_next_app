@@ -53,12 +53,11 @@ const Mentor = ({title, subtitle, content }) => {
     const classes = useStyles();
 
     return (
-        <ThemeProvider theme={theme}>
             <Grid  container justifyContent="center" alignItems="center" item xs={12} sm={6} md={4} lg={3}>
                 <Card className={classes.card}>
-                    <div className={classes.className}>
+                    <div className={classes.className} >
                         <Image src="https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg" alt="Mentor" layout="fill"/>
-                    </div>
+                        </div>
                         <CardContent className={classes.content}>
                             <Typography variant="h5" component="h2">
                                 {title}
@@ -72,7 +71,7 @@ const Mentor = ({title, subtitle, content }) => {
                         </CardContent>
                 </Card>
             </Grid>
-        </ThemeProvider>
+
     );
 };
 
