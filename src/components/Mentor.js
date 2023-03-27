@@ -6,22 +6,17 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { createTheme } from '@mui/material/styles';
 import Grid from "@mui/material/Grid";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {motion,Variants} from "framer-motion";
 
 const theme = createTheme();
 
 const useStyles = makeStyles(() => ({
-    root: {
-        height: "100%",
-    },
     card: {
         position: "relative",
         width: "100%",
         height: "300px",
-        display: "flex",
-        flexDirection: "row",
-        margin: "2px",
+        display: "block",
         overflow: "hidden",
         "&:hover $content": {
             visibility: "visible",
@@ -44,7 +39,7 @@ const useStyles = makeStyles(() => ({
         width: "100%",
         height: "100%",
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
         background: "rgba(0, 0, 0, 0.5)",
@@ -60,9 +55,11 @@ const Mentor = ({ imageUrl, title, subtitle, content }) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Grid container item xs={12} sm={6} md={4} lg={3} className={classes.root}>
+            <Grid  container justifyContent="center" alignItems="center" item xs={12} sm={6} md={4} lg={3}>
                 <Card className={classes.card}>
-                    <Image className={classes.className} src={imageUrl} alt="Mentor"/>
+                    <div className={classes.className}>
+                        <Image src="https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg" alt="Mentor" layout="fill"/>
+                    </div>
                         <CardContent className={classes.content}>
                             <Typography variant="h5" component="h2">
                                 {title}
