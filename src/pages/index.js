@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <>
         {mentors.map((item, index) => (
-                <Mentor key={index} image={item[0]} title={item[1]} subtitle={item[2]} content={item[3]}/>
+                <Mentor key={index}  title={item[1]} subtitle={item[2]} content={item[3]}/>
         ))}
        
        <Partner/>

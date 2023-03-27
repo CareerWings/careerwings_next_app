@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import { createTheme } from '@mui/material/styles';
 import Grid from "@mui/material/Grid";
 import Image from "next/legacy/image";
-import {motion,Variants} from "framer-motion";
 
 const theme = createTheme();
 
@@ -50,7 +49,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const Mentor = ({ imageUrl, title, subtitle, content }) => {
+const Mentor = ({title, subtitle, content }) => {
     const classes = useStyles();
 
     return (
