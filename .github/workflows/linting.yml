@@ -6,17 +6,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Begin ESLint Linting
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           
       - name: Use Node 16
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: 16
           
       - name: Use Cached node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: node_modules
           key:  nodeModules-${{ hashFiles('**/yarn.lock') }}
@@ -24,7 +24,7 @@ jobs:
             nodeModules-
       
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
         
       - name: Run ESLint
         run: yarn lint
