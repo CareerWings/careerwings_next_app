@@ -1,78 +1,37 @@
-import React from "react";
-import { makeStyles } from '@mui/styles';
-import { ThemeProvider } from '@mui/material/styles';
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { createTheme } from '@mui/material/styles';
-import Grid from "@mui/material/Grid";
-import Image from "next/legacy/image";
+import { motion } from "framer-motion"
+import Image from 'next/image';
+const cardVariants = {
+  offscreen: {
+    y: 300
+  },
+  onscreen: {
+    y: 50,
+    rotate: -10,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+}
 
-const theme = createTheme();
+const hue =(h) =>{ return `hsl(${h}, 100%, 50%)`}
 
-const useStyles = makeStyles(() => ({
-    card: {
-        position: "relative",
-        width: "100%",
-        height: "300px",
-        display: "block",
-        overflow: "hidden",
-        "&:hover $content": {
-            visibility: "visible",
-            opacity: 1,
-        },
-    },
-    image: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        zIndex: -1,
-    },
-    content: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "rgba(0, 0, 0, 0.5)",
-        color: "#fff",
-        visibility: "hidden",
-        opacity: 0,
-        transition: "visibility 0s, opacity 0.5s ease-in-out",
-    },
-}));
+function Mentor({ imgUrl, colorA , colorB }) {
+  const background = `linear-gradient(306deg, ${hue(colorA)}, ${hue(colorB)})`
 
-const Mentor = ({title, subtitle, content }) => {
-    const classes = useStyles();
-
-    return (
-            <Grid  container justifyContent="center" alignItems="center" item xs={12} sm={6} md={4} lg={3}>
-                <Card className={classes.card}>
-                    <div className={classes.className} >
-                        <Image src="https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg" alt="Mentor" layout="fill"/>
-                        </div>
-                        <CardContent className={classes.content}>
-                            <Typography variant="h5" component="h2">
-                                {title}
-                            </Typography>
-                            <Typography color="textSecondary" gutterBottom>
-                                {subtitle}
-                            </Typography>
-                            <Typography variant="body2" component="p">
-                                {content}
-                            </Typography>
-                        </CardContent>
-                </Card>
-            </Grid>
-
-    );
-};
-
+  return (
+    <motion.div
+      className="card-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <div className="splash" style={{ background }} />
+      <motion.div className="card" variants={cardVariants}>
+        <Image src={imgUrl} width={100} height={100}/>
+      </motion.div>
+    </motion.div>
+  )
+}
 export default Mentor;
