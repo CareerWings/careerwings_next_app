@@ -6,16 +6,16 @@ import React from 'react';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
 const mentors=[
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",0,0],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",0,0],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",0,0],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",0,0],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",0,0],];
+    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
+    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
+    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
+    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
+    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],];
 export default function Home() {
     return (
         <>
         {mentors.map((item, index) => (
-                <Mentor key={index}  imgUrl={item[0]} colorA={item[1]} colorB={item[2]} />
+                <Mentor key={index}  imgUrl={item[0]} title={item[1]} description={item[2]} />
         ))}
        
        <Partner/>

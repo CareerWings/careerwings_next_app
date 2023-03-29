@@ -1,37 +1,38 @@
-import { motion } from "framer-motion"
-import Image from 'next/image';
-const cardVariants = {
-  offscreen: {
-    y: 300
-  },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8
-    }
-  }
-}
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-const hue =(h) =>{ return `hsl(${h}, 100%, 50%)`}
+const Mentor = ({ imgUrl, title, description }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-function Mentor({ imgUrl, colorA , colorB }) {
-  const background = `linear-gradient(306deg, ${hue(colorA)}, ${hue(colorB)})`
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <motion.div
-      className="card-container"
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      className="card"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      whileHover={{ scale: 1.1 }}
     >
-      <div className="splash" style={{ background }} />
-      <motion.div className="card" variants={cardVariants}>
-        <Image src={imgUrl} width={100} height={100}/>
-      </motion.div>
+      <motion.img
+        className="card-image"
+        src={imgUrl}
+        alt={title}
+        animate={isHovered ? { opacity: 0.5 } : { opacity: 1 }}
+      />
+      {isHovered && (
+        <motion.div className="card-content">
+          <motion.h2>{title}</motion.h2>
+          <motion.p>{description}</motion.p>
+        </motion.div>
+      )}
     </motion.div>
-  )
-}
+  );
+};
+
 export default Mentor;

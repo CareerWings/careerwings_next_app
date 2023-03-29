@@ -1,35 +1,35 @@
-import React from 'react';
-import Carousel from 'react-material-ui-carousel'
-import { Paper } from '@mui/material'
-import Image from 'next/image';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-function Partner()
-{
-    var items = [
-        {
-            imgurl:"https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
-        },
-        {
-            imgurl:"https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
-        }
-    ]
+const images = [
+  "https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
+  "https://www.ambujacement.com/Upload/Content_Files/ambuja-cement-giant.jpg",
+  "https://www.comaron.com/images/images/uploads/1629786132-ambuja%20plus%20cement%20price%20today.png",
+  "https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
+];
 
-    return (
-        <Carousel autoPlay={true} animation="slide">
-            {
-                items.map( (item, i) => <Item key={i} item={item} /> )
-            }
-        </Carousel>
-    )
-}
+const Partner = () => {
+  const [currentImage, setCurrentImage] = useState(0);
 
-function Item(props)
-{
-    return (
-        <Paper>
-            <Image src={props.item.imgurl} width= {500} height= {300}/>
-            <p>{props.item.description}</p>
-        </Paper>
-    )
-}
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImage((currentImage + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [currentImage]);
+
+  return (
+    <div className="carousel">
+      <motion.div
+        className="image-container"
+        style={{ backgroundImage: `url(${images[currentImage]})` }}
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ ease:"easeIn" ,duration: 0.9 }}
+      />
+    </div>
+  );
+};
+
 export default Partner;
