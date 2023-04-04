@@ -3,7 +3,6 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Head from 'next/head'
-import InternshipCard from '../components/internship-card';
 // import {Inter} from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
 
