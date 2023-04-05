@@ -25,6 +25,8 @@ yarn lint
 ├── public
 ├── src
 │   ├── components        [Contains all the React components]
+│   │   ├── base          [Base components like textbox, cards etc]
+│   │   ├── composite     [Composite components like header, footer etc]
 │   ├── errors            [Error Classes to throw custom errors(optional)]
 │   ├── hooks             [Custom hooks]
 │   ├── pages             [Contains all frontend pages, mapped to filenames]
