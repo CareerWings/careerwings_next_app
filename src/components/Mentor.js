@@ -1,5 +1,10 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import Image from "next/image";
+import motion from 'framer-motion';
 
 
 const useStyles = makeStyles((theme) => ({
