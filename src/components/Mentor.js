@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Hero = (imgURL) => {
+const Mentor = (imgURL) => {
   const classes = useStyles();
 
   return (
@@ -72,4 +72,4 @@ const Hero = (imgURL) => {
   );
 };
 
-export default Hero;
+export default Mentor;
