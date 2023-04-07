@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import {motion} from "framer-motion"
 import Image from "next/image";
 
 
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Hero = (imgURL) => {
+const Mentor = (imgURL) => {
   const classes = useStyles();
 
   return (
@@ -72,4 +71,4 @@ const Hero = (imgURL) => {
   );
 };
 
-export default Hero;
+export default Mentor;
