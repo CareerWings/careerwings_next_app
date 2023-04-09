@@ -1,35 +1,63 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Avatar from '@material-ui/core/Avatar';
 
-const images = [
-  "https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
-  "https://www.ambujacement.com/Upload/Content_Files/ambuja-cement-giant.jpg",
-  "https://www.comaron.com/images/images/uploads/1629786132-ambuja%20plus%20cement%20price%20today.png",
-  "https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg",
-];
-
-const Partner = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImage((currentImage + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [currentImage]);
-
-  return (
-    <div className="carousel">
-      <motion.div
-        className="image-container"
-        style={{ backgroundImage: `url(${images[currentImage]})` }}
-        animate={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ ease:"easeIn" ,duration: 0.9 }}
-      />
-    </div>
-  );
-};
-
-export default Partner;
+const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: theme.spacing(4),
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.secondary.contrastText,
+      [theme.breakpoints.up('sm')]: {
+        padding: theme.spacing(4),
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.primary.contrastText,
+      },
+    },
+    text: {
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+    },
+    avatar: {
+      width: theme.spacing(50),
+      height: theme.spacing(50),
+      marginRight: theme.spacing(10),
+    },
+  }));
+  
+  const Partner = ({ items }) => {
+    const classes = useStyles();
+  
+    const [index, setIndex] = React.useState(0);
+  
+    React.useEffect(() => {
+      const intervalId = setInterval(() => {
+        setIndex((index) => (index + 1) % items.length);
+      }, 2000);
+  
+      return () => clearInterval(intervalId);
+    }, [items]);
+  
+    const item = items[index];
+  
+    return (
+      <Paper elevation={3} className={classes.root}>
+        <Box display="flex" alignItems="center">
+          <Avatar alt={item.title} src={item.image} className={classes.avatar} />
+          <Box className={classes.text}>
+            <Typography variant="subtitle1" component="span">
+              {item.title}
+            </Typography>
+          </Box>
+        </Box>
+      </Paper>
+    );
+  };
+  
+  export default Partner;

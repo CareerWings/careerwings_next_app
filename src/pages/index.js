@@ -9,6 +9,20 @@ import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
 
+const items = [
+    {
+      title: 'Item 1',
+      image: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+    },
+    {
+      title: 'Item 2',
+      image: 'https://picsum.photos/id/238/200/300',
+    },
+    {
+      title: 'Item 3',
+      image: 'https://picsum.photos/id/239/200/300',
+    },
+  ];
 export default function Home() {
     return (
         <>
@@ -24,7 +38,7 @@ export default function Home() {
             <Navbar/>
             <Hero/>
             <Mentor/>
-            <Partner/>
+            <Partner items={items}/>
             <Faq/>
         </>
     )
