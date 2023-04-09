@@ -29,6 +29,12 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(50),
       marginRight: theme.spacing(10),
     },
+    title:{
+        textAlign: "center",
+        color: "black",
+        marginBottom:"2%",
+        marginTop:"2%"
+      },
   }));
   
   const Partner = ({ items }) => {
@@ -47,6 +53,12 @@ const useStyles = makeStyles((theme) => ({
     const item = items[index];
   
     return (
+        <>
+        <div className={classes.title}>
+        <Typography variant="h4">
+        Innovating Together: Our Valued Partners
+         </Typography>
+        </div>
       <Paper elevation={3} className={classes.root}>
         <Box display="flex" alignItems="center">
           <Avatar alt={item.title} src={item.image} className={classes.avatar} />
@@ -57,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
           </Box>
         </Box>
       </Paper>
+      </>
     );
   };
   
