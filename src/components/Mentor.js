@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Mentor = (imgURL) => {
+
+const Mentor = () => {
   const classes = useStyles();
 
   return (
@@ -62,7 +63,6 @@ const Mentor = (imgURL) => {
       {[...Array(4)].map((_, index) => (
         <Card className={classes.card} key={index}>
           <CardContent className={classes.content}>
-            <Image src={imgURL}/>
             <Typography variant="h6"></Typography>
           </CardContent>
         </Card>
