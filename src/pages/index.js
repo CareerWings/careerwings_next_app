@@ -3,10 +3,32 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Head from 'next/head'
+<<<<<<< HEAD
 // import Navbar from '../components/composite/Navbar'
 import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
+=======
+import Navbar from '../components/composite/Navbar'
+import Faq from '@/components/composite/home/Faq';
+import Hero from '@/components/composite/home/Hero';
+import Mentor from '../components/Mentor'
+import Partner from '../components/Partners'
+>>>>>>> main
 
+const items = [
+    {
+      title: 'Item 1',
+      image: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+    },
+    {
+      title: 'Item 2',
+      image: 'https://picsum.photos/id/238/200/300',
+    },
+    {
+      title: 'Item 3',
+      image: 'https://picsum.photos/id/239/200/300',
+    },
+  ];
 export default function Home() {
     return (
         <>
@@ -19,9 +41,17 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
+<<<<<<< HEAD
              {/*<Navbar/>*/}
              <Faq/>
             <Hero/>
+=======
+            <Navbar/>
+            <Hero/>
+            <Mentor/>
+            <Partner items={items}/>
+            <Faq/>
+>>>>>>> main
         </>
     )
 }
