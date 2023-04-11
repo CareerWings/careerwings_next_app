@@ -3,6 +3,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Head from 'next/head'
+import Navbar from '../components/composite/Navbar'
 import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
@@ -35,6 +36,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
+            <Navbar/>
             <Hero/>
             <InternshipCard/>
             <Mentor/>
