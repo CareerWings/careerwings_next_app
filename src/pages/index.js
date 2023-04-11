@@ -8,6 +8,7 @@ import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
+import InternshipCard from '../components/internship-card';
 
 const items = [
     {
@@ -37,6 +38,7 @@ export default function Home() {
             </Head>
             <Navbar/>
             <Hero/>
+            <InternshipCard/>
             <Mentor/>
             <Partner items={items}/>
             <Faq/>
