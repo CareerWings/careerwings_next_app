@@ -3,17 +3,11 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Head from 'next/head'
-<<<<<<< HEAD
-// import Navbar from '../components/composite/Navbar'
-import Faq from '@/components/composite/home/Faq';
-import Hero from '@/components/composite/home/Hero';
-=======
 import Navbar from '../components/composite/Navbar'
 import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
->>>>>>> main
 
 const items = [
     {
@@ -41,17 +35,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
-<<<<<<< HEAD
-             {/*<Navbar/>*/}
-             <Faq/>
-            <Hero/>
-=======
             <Navbar/>
             <Hero/>
             <Mentor/>
             <Partner items={items}/>
             <Faq/>
->>>>>>> main
         </>
     )
 }
