@@ -91,3 +91,25 @@
     font-size: 3rem;
   }
 }
+
+.MuiAvatar-root {
+    border-radius: 0;
+    border: 1px solid #ccc;
+  }
+  .Element {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .Element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 599px) {
+    .mentor {
+      margin-bottom: 20px;
+    }
+  }
+  
