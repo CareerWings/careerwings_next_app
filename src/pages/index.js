@@ -3,6 +3,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Head from 'next/head'
+import { Link } from "react-scroll";
 import Navbar from '../components/composite/Navbar'
 import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
@@ -10,20 +11,6 @@ import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
 import InternshipCard from '../components/internship-card';
 
-const items = [
-    {
-      title: 'Item 1',
-      image: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    },
-    {
-      title: 'Item 2',
-      image: 'https://picsum.photos/id/238/200/300',
-    },
-    {
-      title: 'Item 3',
-      image: 'https://picsum.photos/id/239/200/300',
-    },
-  ];
 export default function Home() {
     return (
         <>
@@ -40,7 +27,9 @@ export default function Home() {
             <Hero/>
             <InternshipCard/>
             <Mentor/>
-            <Partner items={items}/>
+            <Link to="partners" smooth={true} duration={500}>
+              <Partner/>
+            </Link>
             <Faq/>
         </>
     )
