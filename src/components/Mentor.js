@@ -1,73 +1,65 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import {motion} from "framer-motion"
-
+import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: "85vh",
+    flexGrow: 1,
+    padding: theme.spacing(2),
+    backgroundColor: theme.palette.background.paper,
   },
-  card: {
-    borderRadius: '200px',
-    position: "relative",
-    width: "250px",
-    height: "350px",
-    backgroundColor: "white",
-    boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
-    marginRight: "20px",
-    transition: "all 0.3s ease-in",
-    "&:hover": {
-      transform: "rotate(0deg)",
-      boxShadow: "0px 8px 40px rgba(0, 0, 0, 0.2)",
-    },
-    [theme.breakpoints.up("sm")]: {
-      width: "300px",
-      height: "400px",
-    },
-  },
-  content: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+  title: {
+    marginBottom: theme.spacing(5),
     textAlign: "center",
-    color: "black",
   },
-  title:{
+  avatar: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+  },
+  mentorName: {
+    marginTop: theme.spacing(1),
     textAlign: "center",
-    color: "black",
-    marginBottom:"2%",
-    marginTop:"2%"
-  }
+  },
 }));
 
+const mentors = [
+  { name: "Mentor 1", image: "https://assets.entrepreneur.com/content/3x2/2000/1392935090-best-choose-heroes-learn-mentor.jpg" },
+  { name: "Mentor 2", image: "https://www.thebalancemoney.com/thmb/A_uhaT0yyVle46Bfki8domRJ9Mo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/colleagues-business-woman-working-978531556-b538d8fc0ddc492db50b9189235b2bc8.jpg" },
+  { name: "Mentor 3", image: "https://www.thebalancemoney.com/thmb/Vg404OdRDFIHOjvpaiqaHH3A_RY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-555250265-5c379c9dc9e77c0001b89187.jpg" },
+  { name: "Mentor 4", image: "https://guider-ai.com/wp-content/uploads/2022/02/what-is-a-mentor.png" },
+  { name: "Mentor 5", image: "https://coffeemug.ai/blog/wp-content/uploads/2022/01/Mentor-PNG-Final-1024x768.png" },
+];
 
 const Mentor = () => {
   const classes = useStyles();
 
   return (
-    <>
-    <div className={classes.title}>
-        <Typography variant="h4">
-        Connect with our experienced mentors and take your skills to the next level!
-         </Typography>
+    <div className={classes.root}>
+      <Typography variant="h4" component="h2" className={classes.title}>
+        Our Mentors
+      </Typography>
+      <Grid container spacing={3}>
+        {mentors.map((mentor, index) => (
+          <Grid item xs={6} sm={4} md={2} key={index}>
+            <Avatar
+              alt={mentor.name}
+              src={mentor.image}
+              className={classes.avatar}
+            />
+            <Typography
+              variant="subtitle1"
+              component="h3"
+              className={classes.mentorName}
+            >
+              {mentor.name}
+            </Typography>
+          </Grid>
+        ))}
+      </Grid>
     </div>
-    <motion.div className={classes.root} >
-      {[...Array(4)].map((_, index) => (
-        <Card className={classes.card} key={index}>
-          <CardContent className={classes.content}>
-            <Typography variant="h6"></Typography>
-          </CardContent>
-        </Card>
-      ))}
-    </motion.div>
-    </>
   );
 };
 
