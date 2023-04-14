@@ -10,7 +10,7 @@ import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
 import InternshipCard from '../components/internship-card';
-
+import { Grid } from '@material-ui/core';
 export default function Home() {
     return (
         <>
@@ -23,14 +23,18 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
-            <Navbar/>
-            <Hero/>
-            <InternshipCard/>
-            <Mentor/>
-            <Link to="partners" smooth={true} duration={500}>
-              <Partner/>
-            </Link>
-            <Faq/>
+           <Grid container spacing={4}>
+                <Grid item xs={12} md={3}>
+                <Navbar/>
+                </Grid>
+                <Hero/>
+                <InternshipCard/>
+                <Mentor/>
+                <Link to="partners" smooth={true} duration={500}>
+                    <Partner/>
+                </Link>
+                <Faq/>
+            </Grid>
         </>
     )
 }
