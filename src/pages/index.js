@@ -23,17 +23,23 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
-           <Grid container spacing={4}>
+          <Grid container spacing={1}>
                 <Grid item xs={12} md={3}>
-                <Navbar/>
+                    <Navbar/>
                 </Grid>
-                <Hero/>
-                <InternshipCard/>
-                <Mentor/>
-                <Link to="partners" smooth={true} duration={500}>
-                    <Partner/>
-                </Link>
-                <Faq/>
+                <Grid item xs={12} md={9}>
+                <Grid container>
+                <Grid item xs={12}>
+                    <Hero/>
+                    <InternshipCard/>
+                    <Mentor/>
+                    <Link to="partners" smooth={true} duration={500}>
+                        <Partner/>
+                    </Link>
+                    <Faq/>
+                </Grid>
+                </Grid>
+                </Grid>
             </Grid>
         </>
     )
