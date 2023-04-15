@@ -17,9 +17,15 @@ import DateRangeIcon from '@mui/icons-material/DateRange';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import Chip from '@mui/material/Chip';
 import BusinessIcon from '@mui/icons-material/Business';
-import Button from '@mui/material/Button';
+import Button from '@material-ui/core/Button';
 import Stack from '@mui/material/Stack';
+import { makeStyles } from '@material-ui/core/styles';
 
+
+
+const useStyles = makeStyles((theme) => ({
+  expandClass:  {marginLeft: 'auto'}
+}))
 const ExpandMore = styled((props) => {
   const {...other } = props;
   return <IconButton {...other} />;
@@ -32,6 +38,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function InternshipCard() {
+  const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -43,7 +50,7 @@ export default function InternshipCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 450, margin: 2}}>
+    <Card sx={{ maxWidth: 450, margin: 'auto'}}>
       <CardHeader
           title="Job Title"
           subheader="Company Name"  
@@ -63,15 +70,15 @@ export default function InternshipCard() {
       </CardContent>
       <CardActions disableSpacing>
       <Stack direction="row" spacing={2}>
-        <Button variant="contained">Apply Now</Button>
-        <Button variant="outlined" startIcon={<ShareIcon />}>Share</Button>
+        <Button variant="contained" color="primary">Apply Now</Button>
+        <Button variant="outlined" color="primary" startIcon={<ShareIcon />}>Share</Button>
       </Stack>
-        <ExpandMore
+        <ExpandMore 
+          className={classes.expandClass}
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
-          aria-label="show more"
-        >
+          aria-label="show more">
           <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
