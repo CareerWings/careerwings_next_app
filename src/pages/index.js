@@ -3,27 +3,14 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Head from 'next/head'
+import { Link } from "react-scroll";
 import Navbar from '../components/composite/Navbar'
 import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
-import InternshipCard from '@/components/internship-card';
-
-const items = [
-    {
-      title: 'Item 1',
-      image: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    },
-    {
-      title: 'Item 2',
-      image: 'https://picsum.photos/id/238/200/300',
-    },
-    {
-      title: 'Item 3',
-      image: 'https://picsum.photos/id/239/200/300',
-    },
-  ];
+import InternshipCard from '../components/internship-card';
+import { Grid } from '@material-ui/core';
 export default function Home() {
     return (
         <>
@@ -36,12 +23,24 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
-            <Navbar/>
-            <Hero/>
-            <InternshipCard/> 
-            <Mentor/>
-            <Partner items={items}/>
-            <Faq/>
+          <Grid container spacing={1}>
+                <Grid item xs={12} md={3}>
+                    <Navbar/>
+                </Grid>
+                <Grid item xs={12} md={9}>
+                <Grid container>
+                <Grid item xs={12}>
+                    <Hero/>
+                    <InternshipCard/>
+                    <Mentor/>
+                    <Link to="partners" smooth={true} duration={500}>
+                        <Partner/>
+                    </Link>
+                    <Faq/>
+                </Grid>
+                </Grid>
+                </Grid>
+            </Grid>
         </>
     )
 }

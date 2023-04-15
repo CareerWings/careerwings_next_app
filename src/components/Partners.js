@@ -1,76 +1,58 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Avatar from '@material-ui/core/Avatar';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Avatar from "@material-ui/core/Avatar";
+import { Element } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: theme.spacing(4),
-      backgroundColor: theme.palette.secondary.main,
-      color: theme.palette.secondary.contrastText,
-      [theme.breakpoints.up('sm')]: {
-        padding: theme.spacing(4),
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
-      },
-    },
-    text: {
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-    },
-    avatar: {
-      width: theme.spacing(50),
-      height: theme.spacing(50),
-      marginRight: theme.spacing(10),
-    },
-    title:{
-        textAlign: "center",
-        color: "black",
-        marginBottom:"2%",
-        marginTop:"2%"
-      },
-  }));
-  
-  const Partner = ({ items }) => {
-    const classes = useStyles();
-  
-    const [index, setIndex] = React.useState(0);
-  
-    React.useEffect(() => {
-      const intervalId = setInterval(() => {
-        setIndex((index) => (index + 1) % items.length);
-      }, 2000);
-  
-      return () => clearInterval(intervalId);
-    }, [items]);
-  
-    const item = items[index];
-  
-    return (
-        <>
-        <div className={classes.title}>
-        <Typography variant="h4">
-        Innovating Together: Our Valued Partners
-         </Typography>
-        </div>
-      <Paper elevation={3} className={classes.root}>
-        <Box display="flex" alignItems="center">
-          <Avatar alt={item.title} src={item.image} className={classes.avatar} />
-          <Box className={classes.text}>
-            <Typography variant="subtitle1" component="span">
-              {item.title}
-            </Typography>
-          </Box>
-        </Box>
-      </Paper>
-      </>
-    );
-  };
-  
-  export default Partner;
+  root: {
+    flexGrow: 1,
+    padding: theme.spacing(2),
+    backgroundColor: theme.palette.background.paper,
+  },
+  title: {
+    marginBottom: theme.spacing(2),
+    textAlign: "center",
+  },
+  avatar: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+  },
+}));
+
+const partners = [
+  { name: "Partner 1", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/706px-Google_%22G%22_Logo.svg.png" },
+  { name: "Partner 2", image: "https://logolook.net/wp-content/uploads/2021/06/Facebook-Logo.svg" },
+  { name: "Partner 3", image: "https://logowik.com/content/uploads/images/909_adobe.jpg" },
+  { name: "Partner 4", image: "https://assets.stickpng.com/images/62c6eb897a58a4aa1fb7709e.png" },
+  { name: "Partner 5", image: "https://logos-world.net/wp-content/uploads/2020/07/Accenture-Logo.png" },
+];
+
+const Partner = () => {
+  const classes = useStyles();
+
+  return (
+    <Element name="partners">
+      <div className={classes.root}>
+        <Typography variant="h4" component="h2" className={classes.title}>
+          Our Partners
+        </Typography>
+        <Grid container spacing={3}>
+          {partners.map((partner, index) => (
+            <Grid item xs={6} sm={4} md={2} key={index}>
+              <Avatar
+                alt={partner.name}
+                src={partner.image}
+                className={classes.avatar}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </div>
+    </Element>
+  );
+};
+
+export default Partner;
