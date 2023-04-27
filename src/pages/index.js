@@ -24,18 +24,18 @@ export default function Home() {
                 {/**Google tag (gtag.js)**/}
             </Head>
           <Grid container spacing={1}>
-                <Grid item xs={12} md={3}>
+                {/* <Grid item xs={12} md={3}>
                     <Navbar/>
-                </Grid>
+                </Grid> */}
                 <Grid item xs={12} md={9}>
                 <Grid container>
                 <Grid item xs={12}>
                     <Hero/>
-                    <InternshipCard/>
+                    {/* <InternshipCard/>
                     <Mentor/>
                     <Link to="partners" smooth={true} duration={500}>
                         <Partner/>
-                    </Link>
+                    </Link> */}
                     <Faq/>
                 </Grid>
                 </Grid>
