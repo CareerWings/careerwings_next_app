@@ -2,7 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mate
 import { ExpandMore } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     color: 'white',
   },
@@ -31,27 +31,29 @@ const Faq = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography>
-                Each instructor has control over when they open up enrollment. On average though courses run four times per year. Join our mailing list to be the first to hear when enrollments open.
+                    {"Each instructor has control over when they open up enrollment. On average though courses run four times per year. Join our mailing list to be the first to hear when enrollments open."}
                 </Typography>
                 </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
                 <AccordionSummary expandIcon={<ExpandMore />} aria-controls="panel2a-content" id="panel2a-header">
-                <Typography>What are the course formats?</Typography>
+                <Typography>{"What are the course formats?"}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography>
-                Each course is unique and typically ranges from 2-4 weeks. Depending on the topic, it will be a mixture of hands-on projects, live discussions, and video lessons.
+                    {"Each course is unique and typically ranges from 2-4 weeks. Depending on the topic, it will be a mixture of hands-on projects, live discussions, and video lessons."}
                 </Typography>
                 </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
                 <AccordionSummary expandIcon={<ExpandMore />} aria-controls="panel3a-content" id="panel3a-header">
-                <Typography>Do you offer team discounts?</Typography>
+                <Typography>
+                    {"Do you offer team discounts?"}
+                </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography>
-                Yes! Send us a message on the "Dive for Teams" page and we'll get you set up.
+                    {"Yes! Send us a message on the \"Dive for Teams\" page and we'll get you set up."}
                 </Typography>
                 </AccordionDetails>
             </Accordion>
