@@ -25,8 +25,7 @@ export default function Home() {
             </Head>
             {/* <Navbar/> */}
             {/* <Faq/> */}
-            <Hero/>
-            
+            {/* <Hero/> */}
         </>
     )
 }
