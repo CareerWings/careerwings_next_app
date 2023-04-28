@@ -7,8 +7,6 @@ import { Link } from "react-scroll";
 import Navbar from '../components/composite/Navbar'
 import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from "../../assests/theme";
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
 import InternshipCard from '../components/internship-card';
@@ -25,7 +23,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
                 {/**Google tag (gtag.js)**/}
             </Head>
-            {/* <ThemeProvider theme={theme} > */}
+           
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={3}>
                         <Navbar />
@@ -44,7 +42,6 @@ export default function Home() {
                         </Grid>
                     </Grid>
                 </Grid>
-            {/* </ThemeProvider> */}
         </>
     )
 }
