@@ -1,20 +1,10 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import Head from 'next/head'
-// import Navbar from '../components/composite/Navbar'
-import Faq from '@/components/composite/home/Faq';
-import Hero from '@/components/composite/home/Hero';
-import Mentor from '../components/Mentor'
-import Partner from '../components/Partners'
-const mentors=[
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],
-    ["https://static.startuptalky.com/2021/05/Ambuja-Cement-startuptalky.jpg","Ambuj Cement","Sasata nhi sbsa acha"],];
-
+import Faq from './Components/Faq';
+import Mentor from './Components/mentors';
+import Partner from './Components/Partners/Partner';
+import Cards from './Components/Cards/Cards';
+import CategoriesSection from './Components/Courses-Cards/Couses-Section';
+import SectionWithCards from './Components/Know/SectionWithCards';
 export default function Home() {
     return (
         <>
@@ -27,14 +17,13 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
             </Head>
-             {/*<Navbar/>*/}
-             <Faq/>
-            <Hero/>
-             {mentors.map((item, index) => (
-                <Mentor key={index}  imgUrl={item[0]} title={item[1]} description={item[2]} />
-        ))}
-       
-       <Partner/>
+            <Partner/>
+            <Mentor/>
+            <CategoriesSection/>
+            <SectionWithCards/>
+            <Cards/>
+            <Faq/>
+
         </>
     )
 }
