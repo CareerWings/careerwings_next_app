@@ -1,16 +1,13 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import Head from 'next/head'
-import { Link } from "react-scroll";
-import Navbar from '../components/composite/Navbar'
-import Faq from '@/components/composite/home/Faq';
-import Hero from '@/components/composite/home/Hero';
-import Mentor from '../components/Mentor'
-import Partner from '../components/Partners'
-import InternshipCard from '../components/internship-card';
-import { Grid } from '@material-ui/core';
+import Faq from './Components/Faq';
+import Mentor from './Components/mentors';
+import Partner from './Components/Partners/Partner';
+import CategoriesSection from './Components/Courses-Cards/Couses-Section';
+import SectionWithCards from './Components/Know/SectionWithCards';
+import NewCard from './Components/Courses-Cards/NewCard';
+import PricingSection from './Components/Pricing/price-cards';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer/Footer';
 export default function Home() {
     return (
         <>
@@ -22,25 +19,16 @@ export default function Home() {
                 <meta name="author" content="CareerWings WebOps"/>
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
+            <Navbar/>
             </Head>
-          <Grid container spacing={1}>
-                {/* <Grid item xs={12} md={3}>
-                    <Navbar/>
-                </Grid> */}
-                <Grid item xs={12} md={9}>
-                <Grid container>
-                <Grid item xs={12}>
-                    <Hero/>
-                    {/* <InternshipCard/>
-                    <Mentor/>
-                    <Link to="partners" smooth={true} duration={500}>
-                        <Partner/>
-                    </Link> */}
-                    <Faq/>
-                </Grid>
-                </Grid>
-                </Grid>
-            </Grid>
+            <Partner/>
+            <Mentor/>
+            <CategoriesSection/>
+            <NewCard/>
+            <SectionWithCards/>
+            <PricingSection/>
+            <Faq/>
+            <Footer/>
         </>
     )
 }
