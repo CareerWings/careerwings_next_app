@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const NewCard = () => {
@@ -62,7 +63,7 @@ const NewCard = () => {
         {courses.map((course) => (
           <div className="card" key={course.id}>
             <div className="card-image">
-              <img src={course.image} alt={course.courseTitle} />
+              <Image src={course.image} alt={course.courseTitle} width={200} height={300}/>
             </div>
             <div className="card-content">
               <h3>{course.universityName}</h3>

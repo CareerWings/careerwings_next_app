@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Logo from "../../../../assests/images/Landing page/Blue Icon_png.png";
+import Logo from "../../../../assets/images/Landing page/Blue Icon_png.png";
+import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="footer">
@@ -15,16 +16,24 @@ const Footer = () => {
           <h3>Links</h3>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <a href="/about">About Us</a>
+            <Link href="/about">
+                About
+              </Link>
             </li>
             <li>
-              <a href="/services">Services</a>
+            <Link href="/services">
+                Services
+              </Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+            <Link href="/contact">
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>

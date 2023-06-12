@@ -1,6 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { Container } from '@mui/material';
+import Image from "next/image";
 
 
 const SliderItems = [
@@ -20,7 +21,7 @@ function Partner () {
           direction={"left"} loop={0} >
           {SliderItems.map((item) => {
             return (
-              <img src={item.src}
+              <Image src={item.src}
                 width={200}
                 height={90}
                 style={{margin: "0 40px", marginTop: 80}}

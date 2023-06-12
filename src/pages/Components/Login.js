@@ -36,16 +36,16 @@ const LoginPage = () => {
     console.log(status);
   }
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', py: 8 }}>
+    <Box sx={{ bgcolor: "#f5f5f5", py: 8 }}>
       <Container maxWidth="md">
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <Box
               sx={{
                 backgroundImage: 'url("https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?w=2000")',
-                height: '100%',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                height: "100%",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             />
           </Grid>
@@ -86,7 +86,7 @@ const LoginPage = () => {
               </form>
               <Box sx={{ mt: 2 }}>
                 <Typography variant="body2" align="center">
-                  Don't have an account?{' '}
+                  New Here?{' '}
                   <Link href="/SignupPage">
                     <Typography variant="body2" align="center">
                       Sign Up

@@ -1,11 +1,11 @@
 import React from 'react';
-import Male1 from '../../../../assests/images/Landing page/Know/male1.png';
-import Male2 from '../../../../assests/images/Landing page/Know/male2.png';
-import Logo from '../../../../assests/images/Landing page/Know/Logo.jpg'
-import tick1 from '../../../../assests/images/Landing page/Know/tick-square.png';
-import tick2 from '../../../../assests/images/Landing page/Know/tick-square-1.png';
-import tick3 from '../../../../assests/images/Landing page/Know/tick-square-2.png';
-import tick4 from '../../../../assests/images/Landing page/Know/tick-square-3.png';
+import Male1 from '../../../../assets/images/Landing page/Know/male1.png';
+import Male2 from '../../../../assets/images/Landing page/Know/male2.png';
+import Logo from '../../../../assets/images/Landing page/Know/Logo.jpg'
+import tick1 from '../../../../assets/images/Landing page/Know/tick-square.png';
+import tick2 from '../../../../assets/images/Landing page/Know/tick-square-1.png';
+import tick3 from '../../../../assets/images/Landing page/Know/tick-square-2.png';
+import tick4 from '../../../../assets/images/Landing page/Know/tick-square-3.png';
 import Image from 'next/image';
 import Link from 'next/link';
 const SectionWithCards = () => {
@@ -25,7 +25,7 @@ const SectionWithCards = () => {
           <div className="card-container">
             {cards.map((card, index) => (
               <div className="card" key={index}>
-                <Image className="card-icon" src={card.icon} width="50" height="50"/>
+                <Image className="card-icon" src={card.icon} width="50" height="50" alt="cards-icon"/>
                 <div className="card-subtitle">{card.subtitle}</div>
               </div>
             ))}
