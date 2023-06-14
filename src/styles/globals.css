@@ -86,30 +86,82 @@
   .carousel {
     height: 500px;
   }
-  
+
   .image-container > div {
     font-size: 3rem;
   }
 }
 
 .MuiAvatar-root {
-    border-radius: 0;
-    border: 1px solid #ccc;
-  }
-  .Element {
-    opacity: 0;
-    transform: translateY(20%);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  
-  .Element.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+.Element {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 1s ease, transform 1s ease;
+}
 
-  @media (max-width: 599px) {
-    .mentor {
-      margin-bottom: 20px;
-    }
+.Element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 599px) {
+  .mentor {
+    margin-bottom: 20px;
   }
-  
+}
+
+.home-about-sec {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* width: 90%; */
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+
+
+
+.about-desc {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .about-desc {
+    width: 90%;
+  }
+}
+
+.about-desc h1 {
+  color: rgba(22, 29, 39, 1);
+  font-weight: 800;
+  font-size: 50px;
+  /* line-height: 80px; */
+  margin-bottom: 0.5em;
+}
+.about-desc span {
+  color: rgba(66, 76, 249, 1);
+}
+
+.about-desc h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 0.3em;
+
+}
+
+.about-desc h3{
+  font-weight: 800;
+font-size: 25px;
+line-height: 42px;
+
+color: #002652;
+}
+
+.about-illustration{
+  align-self: center;
+}

@@ -9,7 +9,7 @@ import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
-import InternshipCard from '../components/internship-card';
+import AboutSec from '../components/About-section';
 import { Grid } from '@material-ui/core';
 export default function Home() {
     return (
@@ -31,7 +31,7 @@ export default function Home() {
                 <Grid container>
                 <Grid item xs={12}>
                     <Hero/>
-                    <InternshipCard/>
+                    <AboutSec/>
                     <Mentor/>
                     <Link to="partners" smooth={true} duration={500}>
                         <Partner/>

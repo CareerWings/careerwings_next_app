@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "85vh",
   },
   card: {
-    borderRadius: '20px',
+    borderRadius: "20px",
     position: "relative",
     width: "250px",
     height: "350px",
@@ -37,12 +37,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "black",
   },
-  title:{
+  title: {
     textAlign: "center",
     color: "black",
-    marginBottom:"2%",
-    marginTop:"2%"
-  }
+    marginBottom: "2%",
+    marginTop: "2%",
+  },
 }));
 
 const Hero = () => {
@@ -50,20 +50,20 @@ const Hero = () => {
 
   return (
     <>
-    <div className={classes.title}>
+      <div className={classes.title}>
         <Typography variant="h4">
-        Welcome to the deep end of design education
-         </Typography>
-    </div>
-    <div className={classes.root}>
-      {[...Array(4)].map((_, index) => (
-        <Card className={classes.card} key={index}>
-          <CardContent className={classes.content}>
-            <Typography variant="h6">Card {index + 1}</Typography>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
+          Welcome to the deep end of design education
+        </Typography>
+      </div>
+      <div className={classes.root}>
+        {[...Array(4)].map((_, index) => (
+          <Card className={classes.card} key={index}>
+            <CardContent className={classes.content}>
+              <Typography variant="h6">Card {index + 1}</Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </>
   );
 };
