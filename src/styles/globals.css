@@ -214,19 +214,52 @@ color: #000000;
   }
 }
 
-.MuiAvatar-root {
-  border-radius: 0;
-  border: 1px solid #ccc;
-}
-.Element {
-  opacity: 0;
-  transform: translateY(20%);
-  transition: opacity 1s ease, transform 1s ease;
+@media (max-width: 480px) {
+  .category-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
-.Element.visible {
-  opacity: 1;
-  transform: translateY(0);
+
+/*----------------------------------*/
+/* Know CSS*/
+.section-with-cards {
+  padding: 40px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+h2 {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+display: flex;
+align-items: center;
+padding: 0;
+margin: 0;
+
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card {

@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import { Link } from "react-scroll";
-import Navbar from '../components/composite/Navbar'
-import Faq from '@/components/composite/home/Faq';
-import Hero from '@/components/composite/home/Hero';
-import Mentor from '../components/Mentor'
-import Partner from '../components/Partners'
-import InternshipCard from '../components/internship-card';
-import { Grid } from '@material-ui/core';
+import Faq from './Components/Faq';
+import Mentor from './Components/mentors';
+import Partner from './Components/Partners/Partner';
+import CategoriesSection from './Components/Courses-Cards/Couses-Section';
+import SectionWithCards from './Components/Know/SectionWithCards';
+import NewCard from './Components/Courses-Cards/NewCard';
+import PricingSection from './Components/Pricing/price-cards';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer/Footer';
 export default function Home() {
     return (
         <>
@@ -18,6 +19,7 @@ export default function Home() {
                 <meta name="author" content="CareerWings WebOps"/>
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
+            <Navbar/>
             </Head>
             <Partner/>
             <Mentor/>
