@@ -29,6 +29,14 @@ export default function Home() {
             <PricingSection/>
             <Faq/>
             <Footer/>
+            <Partner/>
+            <Mentor/>
+            <CategoriesSection/>
+            <NewCard/>
+            <SectionWithCards/>
+            <PricingSection/>
+            <Faq/>
+            <Footer/>
         </>
     )
 }
