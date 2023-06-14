@@ -1,7 +1,3 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import Head from 'next/head'
 import { Link } from "react-scroll";
 import Navbar from '../components/composite/Navbar'
@@ -22,25 +18,16 @@ export default function Home() {
                 <meta name="author" content="CareerWings WebOps"/>
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
+            <Navbar/>
             </Head>
-          <Grid container spacing={1}>
-                <Grid item xs={12} md={3}>
-                    <Navbar/>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                <Grid container>
-                <Grid item xs={12}>
-                    <Hero/>
-                    <AboutSec/>
-                    <Mentor/>
-                    <Link to="partners" smooth={true} duration={500}>
-                        <Partner/>
-                    </Link>
-                    <Faq/>
-                </Grid>
-                </Grid>
-                </Grid>
-            </Grid>
+            <Partner/>
+            <Mentor/>
+            <CategoriesSection/>
+            <NewCard/>
+            <SectionWithCards/>
+            <PricingSection/>
+            <Faq/>
+            <Footer/>
         </>
     )
 }
