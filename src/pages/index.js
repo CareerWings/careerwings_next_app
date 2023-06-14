@@ -5,7 +5,7 @@ import Faq from '@/components/composite/home/Faq';
 import Hero from '@/components/composite/home/Hero';
 import Mentor from '../components/Mentor'
 import Partner from '../components/Partners'
-import AboutSec from '../components/About-section';
+import InternshipCard from '../components/internship-card';
 import { Grid } from '@material-ui/core';
 export default function Home() {
     return (
@@ -18,8 +18,15 @@ export default function Home() {
                 <meta name="author" content="CareerWings WebOps"/>
                 <link rel="icon" href="/favicon.ico"/>
                 {/**Google tag (gtag.js)**/}
-            <Navbar/>
             </Head>
+            <Partner/>
+            <Mentor/>
+            <CategoriesSection/>
+            <NewCard/>
+            <SectionWithCards/>
+            <PricingSection/>
+            <Faq/>
+            <Footer/>
             <Partner/>
             <Mentor/>
             <CategoriesSection/>
