@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
-import Img1 from '../../../assets/images/Landing page/Mentors/Mentor-Section.png';
+import Img1 from '../../../assests/images/Landing page/Mentors/Mentor-Section.png';
 
 const Mentor = () => {
   const cards = [
@@ -78,9 +78,9 @@ const Mentor = () => {
 
         <div className="right-content">
           <div className="image-frames">
-            <Image src={"/path-to-frame-1.jpg"} alt={"Frame 1"} width={100} height={100}/>
-            <Image src={"/path-to-frame-2.jpg"} alt={"Frame 2"} width={100} height={100}/>
-            <Image src={"/path-to-frame-3.jpg"} alt={"Frame 3"} width={100} height={100}/>
+            <Image src={""} alt={"Frame 1"} width={100} height={100}/>
+            <Image src={""} alt={"Frame 2"} width={100} height={100}/>
+            <Image src={""} alt={"Frame 3"} width={100} height={100}/>
           </div>
         </div>
       </div>

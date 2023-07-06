@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../../styles/Navbar.module.css";
 import Image from "next/image";
-import Logo from "../../../assets/images/Landing page/Blue Icon_png.png";
+import Logo from "../../../assests/images/Landing page/Blue Icon_png.png";
 
 function Navbar() {
   return (

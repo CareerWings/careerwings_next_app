@@ -1,12 +1,12 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
-import icon1 from "../../../../assets/images/Landing page/Icon1.png";
-import icon2 from "../../../../assets/images/Landing page/Icon2.png";
-import icon3 from "../../../../assets/images/Landing page/Icon3.png";
-import icon4 from "../../../../assets/images/Landing page/Icon4.png";
-import icon5 from "../../../../assets/images/Landing page/Icon5.png";
-import icon6 from "../../../../assets/images/Landing page/Icon6.png";
-import icon7 from "../../../../assets/images/Landing page/Icon7.png";
+import icon1 from "../../../../assests/images/Landing page/Icon1.png";
+import icon2 from "../../../../assests/images/Landing page/Icon2.png";
+import icon3 from "../../../../assests/images/Landing page/Icon3.png";
+import icon4 from "../../../../assests/images/Landing page/Icon4.png";
+import icon5 from "../../../../assests/images/Landing page/Icon5.png";
+import icon6 from "../../../../assests/images/Landing page/Icon6.png";
+import icon7 from "../../../../assests/images/Landing page/Icon7.png";
 const CategoriesSection = () => {
   const categories = [
     { icon: icon1 , title: "Technology", subtitle: "20+ Courses"},
